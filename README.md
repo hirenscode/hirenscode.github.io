@@ -1,2 +1,2 @@
 # hirenscode.github.io
-github io page
+Just another Github page, planning to get a better look and feel later.
