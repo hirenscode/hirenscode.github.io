@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hiren Parmar | Software Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-jKvUyGnq8hjuR8kGB+uEYzQbGrRscwSMPf8+KwP4LS5f4MhxlyyvB8ro0L3NKjqgw+5vtR2HE2jcIRd//gqn9w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 <body class="dark-theme">
     <header class="header">
         <div class="container">
-            <h1 class="logo">Hiren Parmar</h1>
+            <h1>Hiren Parmar</h1>
             <nav class="navigation">
                 <ul>
                     <li><a href="#about">About</a></li>
@@ -26,13 +29,16 @@
 
     <div class="switch">
         <input type="checkbox" id="theme-switch">
-        <label for="theme-switch"></label>
+        <label for="theme-switch">
+            <i class="bi bi-sun-fill"></i>
+            <i class="bi bi-moon-stars-fill"></i>
+        </label>
     </div>
 
     <main class="main">
         <section class="about" id="about">
             <div class="container">
-                <h2 class="section-title">About Me</h2>
+                <h2>About Me</h2>
                 <p>
                     I am a passionate and results-oriented software engineer with over 14 years of experience in building and deploying complex enterprise applications. I have a strong foundation in Java, Spring, and other technologies, and I am proficient in developing both frontend and backend applications. I am also a quick learner and I am always eager to learn new technologies and improve my skills.
                 </p>
@@ -49,7 +55,7 @@
 
         <section class="experience" id="experience">
             <div class="container">
-                <h2 class="section-title">Experience</h2>
+                <h2>Experience</h2>
                 <ul class="experience-list">
                     <li>
                         <h3 class="job-title">Workday | Software Engineer III | Pleasanton, CA (May 2019 - Present)</h3>
@@ -91,7 +97,7 @@
 
         <section class="projects" id="projects">
             <div class="container">
-                <h2 class="section-title">Projects</h2>
+                <h2>Projects</h2>
                 <ul class="project-list">
                   <li>
                     <h3>eCommerce Store | Software Engineer | code</h3>
@@ -110,16 +116,16 @@
     </section>
     <section class="awards" id="awards">
       <div class="container">
-          <h2 class="section-title">Awards & Recognition</h2>
-          <ul class="awards-list">
+          <h2>Awards & Recognition</h2>
+          <ul>
               <li>
-                  <h3>Infosys Star Award (Mar 2017)</h3>
+                  <p>Infosys Star Award (Mar 2017)</p>
               </li>
               <li>
-                  <h3>Syntel's Speed Award (Apr 2011)</h3>
+                  <p>Syntel's Speed Award (Apr 2011)</p>
               </li>
               <li>
-                  <h3>UI Platform Innovator Award (Workday, Apr 2020)</h3>
+                  <p>UI Platform Innovator Award (Workday, Apr 2020)</p>
               </li>
           </ul>
       </div>
@@ -127,8 +133,8 @@
 
   <section class="contact" id="contact">
       <div class="container">
-          <h2 class="section-title">Contact</h2>
-          <p>I am always interested in new opportunities and challenges. Feel free to reach out to me via the information below or through my LinkedIn profile.</p>
+          <h2>Contact</h2>
+          <p>While I might not be actively looking for job opportunities, I would be interested in learning about opportunities and challenges. Feel free to reach out to me via the information below or through my LinkedIn profile.</p>
           <ul class="contact-info">
               <li><a href="https://www.linkedin.com/in/hiren11">LinkedIn</a></li>
               <li><a href="mailto:parmar.hiren.r@gmail.com">parmar.hiren.r@gmail.com</a></li>
@@ -149,11 +155,11 @@
 
     themeSwitch.addEventListener('change', function() {
         if (this.checked) {
-            document.body.classList.remove('light-theme');
-            document.body.classList.add('dark-theme');
-        } else {
             document.body.classList.remove('dark-theme');
             document.body.classList.add('light-theme');
+        } else {
+            document.body.classList.remove('light-theme');
+            document.body.classList.add('dark-theme');
         }
     });
 </script>
