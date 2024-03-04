@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hiren Parmar | Software Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
 </head>
-<body>
+<body class="dark-theme">
     <header class="header">
         <div class="container">
             <h1 class="logo">Hiren Parmar</h1>
@@ -21,6 +23,11 @@
             </nav>
         </div>
     </header>
+
+    <div class="switch">
+        <input type="checkbox" id="theme-switch">
+        <label for="theme-switch"></label>
+    </div>
 
     <main class="main">
         <section class="about" id="about">
@@ -136,6 +143,20 @@
       <p>&copy; Hiren Parmar - 2023</p>
   </div>
 </footer>
+
+<script>
+    const themeSwitch = document.getElementById('theme-switch');
+
+    themeSwitch.addEventListener('change', function() {
+        if (this.checked) {
+            document.body.classList.remove('light-theme');
+            document.body.classList.add('dark-theme');
+        } else {
+            document.body.classList.remove('dark-theme');
+            document.body.classList.add('light-theme');
+        }
+    });
+</script>
 
 </body>
 </html>
