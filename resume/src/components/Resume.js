@@ -130,6 +130,11 @@ const Resume = () => {
                     />
 
                     <div className="md:w-5/6 md:pl-8">
+                        <AboutMeSection
+                            ref={aboutMeRef}
+                            isActive={activeSection === 'aboutMe'}
+                        />
+
                         <ExperienceSection
                             ref={experienceRef}
                             isActive={activeSection === 'experience'}
@@ -153,11 +158,6 @@ const Resume = () => {
                         <SkillsSection
                             ref={skillsRef}
                             isActive={activeSection === 'skills'}
-                        />
-                        
-                        <AboutMeSection
-                            ref={aboutMeRef}
-                            isActive={activeSection === 'aboutMe'}
                         />
                     </div>
                 </div>

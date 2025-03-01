@@ -7,44 +7,44 @@ const TimelineNavigation = ({ activeSection, scrollToSection }) => {
             <div className="sticky top-6 flex flex-row md:flex-col justify-around md:justify-start space-y-0 md:space-y-16">
                 <TimelineItem
                     number="1"
+                    label="About Me"
+                    isActive={activeSection === 'aboutMe'}
+                    onClick={() => scrollToSection('aboutMe')}
+                />
+
+                <TimelineItem
+                    number="2"
                     label="Work"
                     isActive={activeSection === 'experience'}
                     onClick={() => scrollToSection('experience')}
                 />
 
                 <TimelineItem
-                    number="2"
+                    number="3"
                     label="Education"
                     isActive={activeSection === 'education'}
                     onClick={() => scrollToSection('education')}
                 />
 
                 <TimelineItem
-                    number="3"
+                    number="4"
                     label="Awards"
                     isActive={activeSection === 'awards'}
                     onClick={() => scrollToSection('awards')}
                 />
 
                 <TimelineItem
-                    number="4"
+                    number="5"
                     label="Projects"
                     isActive={activeSection === 'projects'}
                     onClick={() => scrollToSection('projects')}
                 />
 
                 <TimelineItem
-                    number="5"
+                    number="6"
                     label="Skills"
                     isActive={activeSection === 'skills'}
                     onClick={() => scrollToSection('skills')}
-                />
-
-                <TimelineItem
-                    number="6"
-                    label="About Me"
-                    isActive={activeSection === 'aboutMe'}
-                    onClick={() => scrollToSection('aboutMe')}
                 />
             </div>
         </div>

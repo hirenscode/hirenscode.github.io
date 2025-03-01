@@ -10,7 +10,7 @@ const ExperienceSection = forwardRef(({ isActive }, ref) => {
             className="mb-12 transition-opacity duration-500"
             style={{ opacity: isActive ? 1 : 0.5 }}
         >
-            <SectionHeader number="1" title="Work Experience" />
+            <SectionHeader number="2" title="Work Experience" />
 
             <TimelineSection>
                 <TimelineContentItem
@@ -61,6 +61,20 @@ const ExperienceSection = forwardRef(({ isActive }, ref) => {
                         </div>
                     }
                 />
+
+                <TimelineContentItem
+                    title="Software Engineer - Team Member"
+                    date="July 2008 - June 2010"
+                    organization="IDBI Intech Ltd | Mumbai, MH, India"
+                    description={
+                        <div>
+                            <p>● Developed and maintained a web-based application for a leading Indian bank using JSP, Servlets, JDBC, and Oracle 10g, which improved the bank's customer service by 20%.</p>
+                            <p>● Implemented a new feature for the bank's website using JSP, Servlets, and JDBC, which increased the number of transactions by 30%.</p>
+                        </div>
+                    }
+                />
+                
+                
             </TimelineSection>
         </section>
     );

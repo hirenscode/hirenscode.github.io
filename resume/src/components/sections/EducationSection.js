@@ -10,7 +10,7 @@ const EducationSection = forwardRef(({ isActive }, ref) => {
             className="mb-12 transition-opacity duration-500"
             style={{ opacity: isActive ? 1 : 0.5 }}
         >
-            <SectionHeader number="2" title="Education" />
+            <SectionHeader number="3" title="Education" />
 
             <TimelineSection>
                 <TimelineContentItem

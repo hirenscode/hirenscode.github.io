@@ -9,7 +9,7 @@ const AboutMeSection = forwardRef(({ isActive }, ref) => {
             className="mb-12 transition-opacity duration-500"
             style={{ opacity: isActive ? 1 : 0.5 }}
         >
-            <SectionHeader number="5" title="About Me" />
+            <SectionHeader number="1" title="About Me" />
             
             <div className="mb-8">
                 <p className="mb-4">
@@ -17,7 +17,6 @@ const AboutMeSection = forwardRef(({ isActive }, ref) => {
                 </p>
             </div>
 
-            <SectionHeader number="5.1" title="Contact" />
         </section>
     );
 });
