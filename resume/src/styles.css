@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Overlock', cursive, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* For sticky positioning to work properly */
+.sticky {
+  position: sticky;
+  top: 1.5rem;
+}
