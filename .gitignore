@@ -1,0 +1,29 @@
+# Node dependency directory
+
+node_modules/
+
+# Build artifacts
+build/
+dist/
+
+# Cache files
+.cache/
+
+# IDE specific files
+.idea/
+
+# Linter and code formatter configuration
+.eslintcache/
+
+# Environment variables
+.env
+
+# Testing related files
+coverage/
+
+# Log files
+*.log
+
+# Temporary files
+*.swp
+*.tmp
