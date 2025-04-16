@@ -13,7 +13,7 @@ const AboutMeSection = forwardRef(({ isActive }, ref) => {
             
             <div className="mb-8">
                 <p className="mb-4">
-                    I am a passionate and results-oriented software engineer with over 14 years of experience in building and deploying complex enterprise applications. I have a strong foundation in Java, Spring, and other technologies, and I am proficient in developing both frontend and backend applications. I am also a quick learner and I am always eager to learn new technologies and improve my skills.
+                Software Engineer with a strong track record of success in designing, developing, and scaling high-performance, secure, and distributed backend applications. Expertise in Java, Spring Boot, RESTful APIs, and cloud technologies, with a strong background in BNFS, HRMS and Retail Domain. Proven leadership in guiding teams, coordinating cross-functional projects, and driving engineering excellence. Adept at fostering collaborative environments, driving innovation, and mentoring teams to deliver impactful solutions. Passionate about building scalable solutions, optimizing performance, and mentoring teams.
                 </p>
             </div>
 

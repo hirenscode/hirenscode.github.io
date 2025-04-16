@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import ThemeContext from '../contexts/ThemeContext';
 
-const TimelineContentItem = ({ title, date, organization, description }) => {
+const TimelineContentItem = ({ title, date, organization, description, liveLink, codeLink }) => {
     const theme = useContext(ThemeContext);
     const currentTheme = theme[theme.mode];
 
@@ -19,7 +19,7 @@ const TimelineContentItem = ({ title, date, organization, description }) => {
             }}></div>
             
             <div className="mb-2 flex flex-col md:flex-row md:justify-between">
-                <h3 className="font-bold text-lg">{title}</h3>
+                <h3 className="font-bold text-lg">{title} {liveLink && <sameline> | <a href={liveLink} target="_blank" rel="noopener noreferrer">live</a> </sameline> } {codeLink &&  <sameline> | <a href={codeLink} target="_blank" rel="noopener noreferrer">code</a> </sameline>}  </h3>
                 {date && <span style={{ color: currentTheme.font + '99' }}>{date}</span>}
             </div>
             {organization && (
