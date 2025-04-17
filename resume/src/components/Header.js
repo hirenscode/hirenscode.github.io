@@ -85,7 +85,8 @@ const Header = ({ scrollToJobStatus, contactDetailsRef }) => {
                         <h1 className="text-3xl font-bold">Hiren Parmar</h1>
                         <div className="mt-2 flex flex-wrap justify-center md:justify-start gap-3">
                             <ContactInfo icon="location" text="Newark, CA" />
-                            <ContactInfo icon="phone" text="xxx.xxx.xxxx" isLink={true} link="tel:+1xxx.xxx.xxxx" />
+                            <ContactInfo icon="phone" text="xxx.xxx.xxxx" isLink={true} link="tel:+1 333 235 9454" />
+                            <ContactInfo icon="website" text="hirensweb.com" isLink={true} link="https://hirensweb.com" target="_blank" />
                             <ContactInfo icon="email" text="parmar.hiren.r@gmail.com" isLink={true} link="mailto:parmar.hiren.r@gmail.com" />
                             <ContactInfo icon="linkedin" text="linkedin.com/in/hiren11" isLink={true} link="https://linkedin.com/in/hiren11" />
                             <ContactInfo icon="github" text="github.com/hirenscode" isLink={true} link="https://github.com/hirenscode" />
@@ -142,7 +143,7 @@ const Header = ({ scrollToJobStatus, contactDetailsRef }) => {
     );
 };
 
-const ContactInfo = ({ icon, text, isLink, link }) => {
+const ContactInfo = ({ icon, text, isLink, link, target }) => {
     let iconSvg;
 
     switch(icon) {
@@ -175,16 +176,28 @@ const ContactInfo = ({ icon, text, isLink, link }) => {
                 <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
             );
             break;
+        case 'website':
+            iconSvg = (
+                <>
+                    <path d="M43 42H5a5.006 5.006 0 0 1-5-5V13a5.006 5.006 0 0 1 5-5h1v2H5a3 3 0 0 0-3 3v24a3 3 0 0 0 3 3h38a3 3 0 0 0 3-3v-1h2v1a5.006 5.006 0 0 1-5 5zM14 46h20v2H14z" />
+                    <path d="M17 41h2v6h-2zM29 41h2v6h-2zM45 34H11a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3h34a3 3 0 0 1 3 3v28a3 3 0 0 1-3 3zM11 2a1 1 0 0 0-1 1v28a1 1 0 0 0 1 1h34a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z" />
+                    <path d="M12 4h2v2h-2zM16 4h2v2h-2zM20 4h2v2h-2zM15 24a3 3 0 0 1-3-3v-4h2v4a1 1 0 0 0 2 0v-4h2v4a3 3 0 0 1-3 3z" />
+                    <path d="M19 24a3 3 0 0 1-3-3v-4h2v4a1 1 0 0 0 2 0v-4h2v4a3 3 0 0 1-3 3zM26 24a3 3 0 0 1-3-3v-4h2v4a1 1 0 0 0 2 0v-4h2v4a3 3 0 0 1-3 3z" />
+                    <path d="M30 24a3 3 0 0 1-3-3v-4h2v4a1 1 0 0 0 2 0v-4h2v4a3 3 0 0 1-3 3zM37 24a3 3 0 0 1-3-3v-4h2v4a1 1 0 0 0 2 0v-4h2v4a3 3 0 0 1-3 3z" />
+                    <path d="M41 24a3 3 0 0 1-3-3v-4h2v4a1 1 0 0 0 2 0v-4h2v4a3 3 0 0 1-3 3zM9 8h38v2H9zM42 28h2v2h-2zM28 28h12v2H28zM9 38H7a3 3 0 0 1-3-3v-2h2v2a1 1 0 0 0 1 1h2zM11 36h2v2h-2z" />
+                </>
+            );
+            break;
         default:
             iconSvg = null;
     }
 
     return (
         <div className="flex items-center">
-            <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+            <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox={icon === 'website' ? "0 0 48 48" : "0 0 20 20"}>
                 {iconSvg}
             </svg>
-            <span>{isLink ? <a href={link}>{text}</a> : text}</span>
+            <span>{isLink ? <a href={link} target={target}>{text}</a> : text}</span>
         </div>
     );
 };
